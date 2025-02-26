@@ -1,0 +1,13 @@
+.no-matching-records {
+    width: calc(100% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--surface-card);
+    color: var(--text-color-secondary);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 2rem 1rem;
+    margin: 0.5rem;
+    margin-top: 1rem;
+}

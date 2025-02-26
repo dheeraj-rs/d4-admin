@@ -1,0 +1,52 @@
+// # Base Layout Settings
+$padding-layout-base: 0.5rem;
+$z-index-layout-max: 9999;
+$z-index-layout-mask: 997;
+$border-radius-layout-base: 12px;
+$box-shadow-layout-base: 0px 3px 5px rgba(0, 0, 0, 0.02), 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.08);
+$linear-gradient-layout-separator: linear-gradient(90deg, transparent 0%, var(--surface-border) 20%, var(--surface-border) 80%, transparent 100%);
+
+// # Animation Settings
+$duration-transition-base: 0.3s;
+$easing-transition-base: ease-in-out;
+
+// # Topbar Variables
+$height-topbar-base: 5rem;
+$z-index-topbar-base: 998;
+$z-index-topbar-mask: 997;
+
+// # Bottombar Variables
+$z-index-bottombar-mask: 997;
+$z-index-bottombar-base: 998;
+$width-bottombar-base: 5rem;
+$height-bottombar-base: 4rem;
+$width-bottombar-hover: calc(100% - #{$padding-layout-base * 2});
+$height-bottombar-hover: 300px;
+$width-bottombar-expanded: 300px;
+$height-bottombar-mobile: 5rem;
+$width-bottombar-mobile: calc(100% - $padding-layout-base * 2);
+
+// # Config Variables
+$width-config-expanded: 300px;
+$top-config-base: calc($height-topbar-base + $padding-layout-base * 2);
+$height-config-base: calc(100% - (#{4 * $padding-layout-base} + #{$height-topbar-base} + #{$height-bottombar-base}));
+$height-config-overlay: calc(100% - #{$padding-layout-base * 2});
+$height-config-inactive-topbar: calc(100% - (#{3 * $padding-layout-base} + #{$height-bottombar-base}));
+$height-config-inactive-bottombar: calc(100% - (#{3 * $padding-layout-base} + #{$height-topbar-base}));
+$z-index-config-base: 998;
+
+// # Sidebar Variables
+$height-sidebar-base: calc(100% - #{$height-topbar-base + $padding-layout-base * 3});
+$width-sidebar-expanded: 300px;
+$width-sidebar-base: 5rem;
+$top-sidebar-base: calc($height-topbar-base + $padding-layout-base * 2);
+$height-sidebar-overlay: calc(100% - #{$padding-layout-base * 2});
+$height-sidebar-menu: calc(100% - #{$height-bottombar-base});
+$z-index-sidebar-base: 998;
+
+// # Main Container Variables
+$padding-main-container: calc($height-topbar-base + $padding-layout-base) $padding-layout-base $padding-layout-base $padding-layout-base;
+$padding-top-main-container-base: calc($height-topbar-base + $padding-layout-base * 2);
+$margin-left-main-container-shrink: calc($width-sidebar-expanded + $padding-layout-base);
+$margin-left-main-container-expanded: calc($width-sidebar-base + $padding-layout-base);
+$margin-right-main-container-shrink: calc($width-config-expanded + $padding-layout-base);

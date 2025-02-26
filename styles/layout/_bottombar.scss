@@ -1,0 +1,52 @@
+.layout-bottombar {
+    transition: transform $duration-transition-base $easing-transition-base, visibility 0s linear $duration-transition-base;
+    z-index: $z-index-bottombar-mask;
+    .layout-bottombar-desktop {
+        box-sizing: border-box;
+        flex: 1 1 auto;
+        position: fixed;
+        right: $padding-layout-base;
+        bottom: $padding-layout-base;
+        background-color: var(--surface-overlay);
+        border-radius: $border-radius-layout-base;
+        box-shadow: $box-shadow-layout-base;
+        transition: transform $duration-transition-base $easing-transition-base, right $duration-transition-base $easing-transition-base,
+            left $duration-transition-base $easing-transition-base, width $duration-transition-base $easing-transition-base,
+            height $duration-transition-base $easing-transition-base $duration-transition-base;
+        &:not(:hover) {
+            transition: transform $duration-transition-base $easing-transition-base, right $duration-transition-base $easing-transition-base,
+                left $duration-transition-base $easing-transition-base, height $duration-transition-base $easing-transition-base,
+                width $duration-transition-base $easing-transition-base $duration-transition-base,
+                z-index $duration-transition-base linear $duration-transition-base;
+            width: $width-bottombar-base;
+            height: $height-bottombar-base;
+            z-index: $z-index-bottombar-mask;
+        }
+    }
+
+    .layout-bottombar-mobile {
+        display: none;
+        position: fixed;
+        bottom: $padding-layout-base;
+        right: $padding-layout-base;
+        flex: 1 1 auto;
+        width: $width-bottombar-mobile;
+        height: $height-bottombar-mobile;
+        background-color: var(--surface-overlay);
+        box-shadow: $box-shadow-layout-base;
+        border-radius: $border-radius-layout-base;
+        z-index: $z-index-bottombar-base;
+        transform: translateX(100%);
+    }
+
+    .layout-bottombar-mask {
+        width: 100%;
+        height: $height-bottombar-base;
+        background-color: var(--surface-ground);
+        transition: transform 0.3s ease-in-out;
+        position: fixed;
+        bottom: 0;
+        z-index: $z-index-bottombar-mask;
+        display: none;
+    }
+}

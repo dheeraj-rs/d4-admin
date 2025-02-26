@@ -1,0 +1,61 @@
+// Ripple Effect
+.p-ripple {
+    position: relative;
+    overflow: hidden;
+}
+.p-ink {
+    display: block;
+    position: absolute;
+    background: var(--primary-color, rgba(255, 255, 255, 0.5));
+    border-radius: 100%;
+    transform: scale(0);
+    pointer-events: none;
+
+    &.p-ink-active {
+        animation: ripple 0.4s linear;
+    }
+}
+.p-ink.p-ink-active {
+    animation: ripple 0.4s linear;
+}
+
+// Enter transition
+.layout-submenu-enter {
+    max-height: 1000px !important;
+    transition: max-height 1s ease-in-out;
+}
+.layout-submenu-enter-active {
+    max-height: 1000px !important;
+    transition: max-height 1s ease-in-out;
+}
+// Exit transition
+.layout-submenu-exit {
+    max-height: 1000px !important;
+}
+.layout-submenu-exit-active {
+    overflow: hidden;
+    max-height: 0 !important;
+    transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+}
+.clear-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+// Menu Separator
+.separator-line {
+    height: 1px;
+    border: none;
+    outline: none;
+    transition: all ease 0.3s;
+    background-image: $linear-gradient-layout-separator;
+    background-size: 100% 1px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transform: translateY(-1rem);
+    opacity: 0;
+}

@@ -1,0 +1,120 @@
+.paginator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--surface-card);
+    border-radius: 6px;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .paginator-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .rows-select {
+            padding: 0.5rem;
+            border-radius: 4px;
+            background: var(--surface-overlay);
+            color: var(--text-color);
+            min-width: 120px;
+            
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
+        }
+
+        .record-info {
+            color: var(--text-color-secondary);
+            white-space: nowrap;
+            
+            @media screen and (max-width: 480px) {
+                text-align: center;
+            }
+        }
+    }
+
+    .paginator-right {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media screen and (max-width: 480px) {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--surface-border);
+            background: var(--surface-overlay);
+            color: var(--text-color);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            min-width: 100px;
+
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
+
+            &:hover:not(:disabled) {
+                background: var(--surface-hover);
+            }
+
+            &:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+
+            &.active {
+                background: var(--primary-color);
+                color: var(--primary-color-text);
+                border-color: var(--primary-color);
+            }
+        }
+
+        .page-numbers {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            @media screen and (max-width: 480px) {
+                width: 100%;
+                order: -1;
+                margin: 0.5rem 0;
+            }
+
+            button {
+                min-width: 40px;
+                padding: 0.5rem;
+
+                @media screen and (max-width: 360px) {
+                    min-width: 35px;
+                    padding: 0.4rem;
+                }
+            }
+
+            .ellipsis {
+                padding: 0 0.5rem;
+                color: var(--text-color-secondary);
+            }
+        }
+    }
+}

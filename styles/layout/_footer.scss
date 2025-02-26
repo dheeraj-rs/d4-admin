@@ -1,0 +1,25 @@
+.layout-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    margin: $padding-layout-base 0;
+    // border-top: 1px solid var(--surface-border);
+    border: none;
+    outline: none;
+    transition: all ease 0.3s;
+    background-image: $linear-gradient-layout-separator;
+    background-size: 100% 1px;
+    background-position: top;
+    background-repeat: no-repeat;
+    img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    span {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-left: 0.5rem;
+    }
+}
